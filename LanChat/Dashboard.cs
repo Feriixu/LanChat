@@ -8,11 +8,6 @@ namespace LanChat
     {
         public Dashboard() => this.InitializeComponent();
 
-        private void button1_Click(object sender, System.EventArgs e)
-        {
-            backgroundWorkerServer.RunWorkerAsync();
-        }
-
         private void MessageReceived(object sender, MessageEventArgs e)
         {
             Console.WriteLine(e.Message);
