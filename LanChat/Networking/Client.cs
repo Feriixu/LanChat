@@ -8,10 +8,10 @@ namespace LanChat.Networking
 {
     public class Client
     {
-        public void SendMessage(string message)
+        public static void SendMessage(string message, string remoteIP = "127.0.0.1")
         {
             var client = new UdpClient();
-            IPEndPoint ep = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 11000); // endpoint where server is listening
+            IPEndPoint ep = new IPEndPoint(IPAddress.Parse(remoteIP), 11000); // endpoint where server is listening
             client.Connect(ep);
 
             // send data

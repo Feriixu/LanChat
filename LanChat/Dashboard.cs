@@ -10,11 +10,6 @@ namespace LanChat
 
         public Dashboard() => this.InitializeComponent();
 
-        private void button1_Click(object sender, System.EventArgs e)
-        {
-            backgroundWorkerServer.RunWorkerAsync();
-        }
-
         private void MessageReceived(object sender, MessageEventArgs e)
         {
             Console.WriteLine(e.Message);
@@ -35,18 +30,11 @@ namespace LanChat
             }
         }
 
-        private void button2_Click(object sender, System.EventArgs e)
-        {
-            var client = new Client();
-            client.SendMessage("testing");
-            listBoxMessages.Items.Add("testing");
-        }
-
         private void backgroundWorkerServer_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-            var server = new Server();
+            var server = new Server(true);
             server.MessageReceived += MessageReceived;
-            server.Start();
+            server.Listen();
         }
 
         private void joinRoomToolStripMenuItem_Click(object sender, EventArgs e)

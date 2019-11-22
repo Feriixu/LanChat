@@ -49,7 +49,6 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Server";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -62,6 +61,7 @@
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // listBoxMessages
+            // listBox1
             // 
             this.listBoxMessages.FormattingEnabled = true;
             this.listBoxMessages.Location = new System.Drawing.Point(309, 153);
