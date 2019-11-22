@@ -117,31 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="backgroundWorkerServer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>195, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="createToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAADRSURBVEhL7ZXRDcIwDEQzAiMwCpvBJrAJbAAbwCbUL/SqUCUxklu+etKTEtfYVXMO6QftjbNx
-        nUGMZ2E9jHeDuxGWir2M2whrxcNSoVPefcR6azBp1QY7w2tATld4+WnoBy1aDVpg4TwnlzHgcTAk1rWc
-        OdTOvmaDt3mzGmVxiVgtFzQn1J4a5M1C+qr5twYc9LFB6xPVckGmyQ1WP2Ss1LsxBYcnsa7llFDTvc4X
-        GTRPXoOwtgauVAhv6w+/vBzD6lmYZ2HhZQaGqSwh5vg8pQHBY8cumO960wAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="joinRoomToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAE6SURBVEhLrZVhUQMxEIVPQiUgAQlIqANwAA5AQh2Ag9YBOAAH4KA4aN+XaW/20nfJ9uDNfD8u
-        2c1udpPc0NFK3IuteBeHE9+n70dxI64WCz+LvTgv2uJVpAPdiuzCEXweRFMYOOdrmA2yNHPHRRBqTuOc
-        cc2veBFfYayGREl4FA7OsIZFSQb1fDhlo8jKGUXeRFQmqXKy1mFgDte4TABsSmZuEtjZpJZBmQCfYvgI
-        A5FYbye2T5AWZeeu/gT9N/2IOsDkBPxVcyWifr0S8V61KCVqNfniwgRRY+cToY8lipuMLD2mG1HKkLlo
-        PMlRmQDjE54xhtiXns/kJGZ3AfSFBhLMzYO9oAw44yW4nhVlGt6jNLalO5EtVwSf2cxr0RMycQs5uEvp
-        n34UgchqJ+IfjOeFU/IkGgsPwxH1wlzir6Hz5wAAAABJRU5ErkJggg==
-</value>
-  </data>
 </root>
