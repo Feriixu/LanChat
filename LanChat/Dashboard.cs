@@ -6,6 +6,8 @@ namespace LanChat
 {
     public partial class Dashboard : Form
     {
+        public UserControl ActiveControl { get; set; }
+
         public Dashboard() => this.InitializeComponent();
 
         private void button1_Click(object sender, System.EventArgs e)
@@ -22,14 +24,14 @@ namespace LanChat
         private delegate void SafeCallDelegate(string message);
         private void AddMessageSafe(string message)
         {
-            if (listBox1.InvokeRequired)
+            if (listBoxMessages.InvokeRequired)
             {
                 var d = new SafeCallDelegate(AddMessageSafe);
-                listBox1.Invoke(d, new object[] { message });
+                listBoxMessages.Invoke(d, new object[] { message });
             }
             else
             {
-                listBox1.Items.Add(message);
+                listBoxMessages.Items.Add(message);
             }
         }
 
@@ -37,7 +39,7 @@ namespace LanChat
         {
             var client = new Client();
             client.SendMessage("testing");
-            listBox1.Items.Add("testing");
+            listBoxMessages.Items.Add("testing");
         }
 
         private void backgroundWorkerServer_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
@@ -45,6 +47,12 @@ namespace LanChat
             var server = new Server();
             server.MessageReceived += MessageReceived;
             server.Start();
+        }
+
+        private void joinRoomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.flowLayoutPanel1.Controls.Remove(ActiveControl);
+            this.flowLayoutPanel1.Controls.Add(new ServerBrowser());
         }
     }
 }
