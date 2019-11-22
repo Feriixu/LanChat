@@ -33,18 +33,11 @@ namespace LanChat
             }
         }
 
-        private void button2_Click(object sender, System.EventArgs e)
-        {
-            var client = new Client();
-            client.SendMessage("testing");
-            listBox1.Items.Add("testing");
-        }
-
         private void backgroundWorkerServer_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-            var server = new Server();
+            var server = new Server(true);
             server.MessageReceived += MessageReceived;
-            server.Start();
+            server.Listen();
         }
     }
 }
