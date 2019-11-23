@@ -56,7 +56,8 @@ namespace LanChat.Networking
             {
                 Client.SendMessage(message: message, client.IP);
             }
-        }
+        }       
+
         public event EventHandler<MessageEventArgs> MessageReceived;
         private void OnMessageReceived(string message)
         {
