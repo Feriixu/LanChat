@@ -49,12 +49,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Networking\Addressing.cs" />
     <Compile Include="Networking\ChatClient.cs" />
     <Compile Include="Networking\Client.cs" />
-    <Compile Include="Dashboard.cs">
+    <Compile Include="View\ChatRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ChatRoom.Designer.cs">
+      <DependentUpon>ChatRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
+    <Compile Include="View\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Networking\ClientMessage.cs" />
@@ -63,13 +70,16 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Networking\Server.cs" />
-    <Compile Include="ServerBrowser.cs">
+    <Compile Include="View\ServerBrowser.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ServerBrowser.Designer.cs">
+    <Compile Include="View\ServerBrowser.Designer.cs">
       <DependentUpon>ServerBrowser.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Dashboard.resx">
+    <EmbeddedResource Include="View\ChatRoom.resx">
+      <DependentUpon>ChatRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -81,7 +91,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ServerBrowser.resx">
+    <EmbeddedResource Include="View\ServerBrowser.resx">
       <DependentUpon>ServerBrowser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

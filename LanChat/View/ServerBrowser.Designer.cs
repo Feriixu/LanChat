@@ -1,4 +1,4 @@
-﻿namespace LanChat
+﻿namespace LanChat.View
 {
     partial class ServerBrowser
     {
@@ -64,6 +64,7 @@
             this.buttonJoin.TabIndex = 2;
             this.buttonJoin.Text = "Join Server";
             this.buttonJoin.UseVisualStyleBackColor = true;
+            this.buttonJoin.Click += new System.EventHandler(this.buttonJoin_Click);
             // 
             // ServerBrowser
             // 

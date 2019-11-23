@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Data;
@@ -7,11 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net;
-using System.Net.Sockets;
 using LanChat.Networking;
 
-namespace LanChat
+namespace LanChat.View
 {
     public partial class ServerBrowser : UserControl
     {
@@ -29,34 +26,18 @@ namespace LanChat
                 return;
             }
 
-
+            var localMask = Addressing.GetSubnetMask(localIP);
+            var hosts = Addressing.ScanNetwork(localIP, localMask);
+            listBoxServers.DataSource = hosts;
+            listBoxServers.DisplayMember = "Address";
         }
-    }
 
-
-}
-
-namespace LanChat.Networking
-{
-    public static class Addressing
-    {
-        public static string GetLocalIP()
+        private void buttonJoin_Click(object sender, EventArgs e)
         {
-            var host = Dns.GetHostEntry(Dns.GetHostName());
-            foreach (var ip in host.AddressList)
+            if (listBoxServers.SelectedIndex != -1)
             {
-                Console.WriteLine(ip);
-                if (ip.AddressFamily == AddressFamily.InterNetwork)
-                {
-                    return ip;
-                }
+                Dashboard.Instance.ShowChatRoom(listBoxServers.SelectedValue.ToString());
             }
-            return null;
-        }
-
-        public static string[] ScanNetwork(string ip, string mask)
-        {
-
         }
     }
 }

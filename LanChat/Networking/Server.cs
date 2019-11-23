@@ -15,7 +15,6 @@ namespace LanChat.Networking
             this.Distribute = distribute;
             this.chatClients = new List<ChatClient>();
         }
-
         public void Listen()
         {
             var udpServer = new UdpClient(11000);
@@ -51,15 +50,13 @@ namespace LanChat.Networking
                 udpServer.Send(new byte[] { 1 }, 1, remoteEP); // reply back
             }
         }
-
-        private void DistributeMessage(string message)
+        public void DistributeMessage(string message)
         {
             foreach (var client in chatClients)
             {
-                Client.SendMessage(message: message, remoteIP: client.IP);
+                Client.SendMessage(message: message, client.IP);
             }
         }
-
         public event EventHandler<MessageEventArgs> MessageReceived;
         private void OnMessageReceived(string message)
         {

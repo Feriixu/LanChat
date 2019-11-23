@@ -29,59 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listBoxMessages = new System.Windows.Forms.ListBox();
             this.backgroundWorkerServer = new System.ComponentModel.BackgroundWorker();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStripToolbar = new System.Windows.Forms.MenuStrip();
             this.chatroomsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.joinRoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.menuStrip1.SuspendLayout();
+            this.flowLayoutPanelMain = new System.Windows.Forms.FlowLayoutPanel();
+            this.menuStripToolbar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // menuStripToolbar
             // 
-            this.button1.Location = new System.Drawing.Point(309, 124);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Server";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(390, 124);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Client";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // listBoxMessages
-            // listBox1
-            // 
-            this.listBoxMessages.FormattingEnabled = true;
-            this.listBoxMessages.Location = new System.Drawing.Point(309, 153);
-            this.listBoxMessages.Name = "listBoxMessages";
-            this.listBoxMessages.Size = new System.Drawing.Size(245, 186);
-            this.listBoxMessages.TabIndex = 2;
-            // 
-            // backgroundWorkerServer
-            // 
-            this.backgroundWorkerServer.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerServer_DoWork);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripToolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.chatroomsToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(580, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStripToolbar.Location = new System.Drawing.Point(0, 0);
+            this.menuStripToolbar.Name = "menuStripToolbar";
+            this.menuStripToolbar.Size = new System.Drawing.Size(580, 24);
+            this.menuStripToolbar.TabIndex = 3;
+            this.menuStripToolbar.Text = "menuStrip1";
             // 
             // chatroomsToolStripMenuItem
             // 
@@ -98,6 +63,7 @@
             this.createToolStripMenuItem.Name = "createToolStripMenuItem";
             this.createToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.createToolStripMenuItem.Text = "Create Room";
+            this.createToolStripMenuItem.Click += new System.EventHandler(this.createToolStripMenuItem_Click);
             // 
             // joinRoomToolStripMenuItem
             // 
@@ -109,12 +75,11 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 28);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(0, 0);
-            this.flowLayoutPanel1.TabIndex = 4;
+            this.flowLayoutPanelMain.AutoSize = true;
+            this.flowLayoutPanelMain.Location = new System.Drawing.Point(0, 27);
+            this.flowLayoutPanelMain.Name = "flowLayoutPanel1";
+            this.flowLayoutPanelMain.Size = new System.Drawing.Size(100, 100);
+            this.flowLayoutPanelMain.TabIndex = 4;
             // 
             // Dashboard
             // 
@@ -123,32 +88,25 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(580, 364);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.listBoxMessages);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.flowLayoutPanelMain);
+            this.Controls.Add(this.menuStripToolbar);
+            this.MainMenuStrip = this.menuStripToolbar;
             this.Name = "Dashboard";
             this.Text = "Form1";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStripToolbar.ResumeLayout(false);
+            this.menuStripToolbar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBoxMessages;
         private System.ComponentModel.BackgroundWorker backgroundWorkerServer;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStripToolbar;
         private System.Windows.Forms.ToolStripMenuItem chatroomsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem joinRoomToolStripMenuItem;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMain;
     }
 }
 
